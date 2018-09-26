@@ -1,0 +1,2 @@
+. makeKernel.sh
+. rebootMic.sh

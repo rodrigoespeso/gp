@@ -1,0 +1,2 @@
+micctrl --reboot
+. kstToMic.sh

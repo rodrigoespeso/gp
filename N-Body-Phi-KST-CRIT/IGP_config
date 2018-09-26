@@ -1,0 +1,44 @@
+//                                              Configuration file of the IGP library.
+//                                             IGP (Interfaz del Gestor de Paralelismo)
+// The method used by parallelism manager to decide when multithreaded application has to create a new thread.
+// The following methods have been built, where the parallelism manager decides to create news threads,
+// METHOD / APPROACH: NON ADAPTIVE METHOD
+//   0    /    0    : if total number of active threads is less than MAX_THREADS.
+// METHOD / APPROACH: ADAPTIVE METHODS AT APPLICATION LEVEL
+//   1    /    0    : if the application performance with n threads measured by parallelism manager in last time between the
+//                  : application performance with n-1 threads is better than a THRESHOLD chosen and total number of active
+//                  : threads is less than MAX_THREADS. The THRESHOLD value is between 0 and 1.
+//   2    /    0    : if last PERIOD between idle average time of all cpus in this interval time is higher than THRESHOLD
+//                  : chosen and total number of active threads is less than MAX_THREADS. The idle time of cpus are reading
+//                  : from /proc/stat file. The THRESHOLD value is between 0 and 100.
+//   2    /    1    : if sleeping time of all threads in the last PERIOD is null and total number of active threads is less than
+//                  : MAX_THREADS. The sleeping time of threads are reading form /proc/[id_pid]/task/[id_tid]/stat files.
+//   2    /    2    : if Phi temperature less fan-in temperature doesn`t increase a THRESHOLD chosen and total number
+//                  : of active threads is less than MAX_THREADS. The Phi and fan-in temperatures are reading from /sys/class/
+//                  : micras/temp file. The THRESHOLD value is between 0 and 100.
+//   2    /    3    : if Phi power running multithreaded application less phi power in idle state doesn’t increase a THRESHOLD
+//                  : chosen and total number of active threads is less than MAX_THREADS. The Phi power is reading from /sys/
+//                  : class/micras/temp file. The THRESHOLD value is between 0 and 100.
+//   3    /    0    : if the application power is under a POWER THRESHOLD and the total_work hasn't decreased
+//                  : The THRESHOLD value is between 0 and 1.
+// METHOD / APPROACH: ADAPTIVE METHODS AT KERNEL LEVEL
+// 3,4,5  /   0-5   : Kernel-level methods.
+METHOD=4
+APROACH=1
+// The Max_Threads is a maximum number of running threads at the same time.
+MAX_THREADS=2048
+// Threshold used in application performance and power method.
+WORK_THRESHOLD=0.8
+// Threshold used in application power method
+POWER_THRESHOLD=1.0
+// Period is a time interval (ms) between two consecutive samples to read the manager decision
+PERIOD=0.00
+// Manager shows times and information by console.
+TIMING=yes
+// Manager sleeps running threads if it´s neccesary.
+DETENTION=no
+// Main process resolves workload like a thread
+PROCESS_IS_A_THREAD=yes
+// Main process uses loadmax as approach or the first thread
+MAXLOAD=no
+
