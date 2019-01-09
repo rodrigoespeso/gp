@@ -1,6 +1,6 @@
 # Gestor de Paralelismo a nivel de Kernel (Kernel's Paralelism Level Manager)
 
-[ES] #
+[ES]
 Gracias al auge de las arquitecturas paralelas, las
 aplicaciones multihebradas se han visto muy desarrolladas en estos
 últimos años y, por lo tanto, han sido necesarias herramientas de ayuda
@@ -18,7 +18,7 @@ existente para obtener una aplicación de benchmark, mediante la cual se
 han realizado pruebas de rendimiento sobre este equipo para demostrar
 el funcionamiento del GP a nivel de kernel.
 
-[EN] #
+[EN]
 Due to the growth of the parallel architectures, also the multithreading
 applications have been developed during the last years, so it was
 needed tools which support the parallel programing in order to take
