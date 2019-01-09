@@ -1,4 +1,24 @@
-# Kernel's Paralelism Level Manager
+# Gestor de Paralelismo a nivel de Kernel (Kernel's Paralelism Level Manager)
+
+[ES]
+Gracias al auge de las arquitecturas paralelas, las
+aplicaciones multihebradas se han visto muy desarrolladas en estos
+últimos años y, por lo tanto, han sido necesarias herramientas de ayuda
+al desarrollador en la programación paralela para aprovechar la potencia
+de los multiprocesadores y procesadores multihebrados. En el presente
+trabajo se estudia como herramienta el Gestor del nivel de Paralelismo
+(GP) a nivel de kernel, que ayuda a las aplicaciones multihebradas a
+controlar el número de hebras en ejecución y, de esta manera, mejorar su
+eficiencia. Durante el desarrollo del trabajo se realiza la integración del
+GP en el núcleo Linux de la pila de software
+Intel® Manycore Platform Software Stack (Intel® MPSS) del
+coprocesador Intel® Xeon Phi. Además, se ha realizado la integración de
+la librería Interfaz para el Gestor de Paralelismo (IGP) en una aplicación
+existente para obtener una aplicación de benchmark, mediante la cual se
+han realizado pruebas de rendimiento sobre este equipo para demostrar
+el funcionamiento del GP a nivel de kernel.
+
+[EN]
 Due to the growth of the parallel architectures, also the multithreading
 applications have been developed during the last years, so it was
 needed tools which support the parallel programing in order to take
