@@ -1,4 +1,4 @@
-# gp
+# Kernel's Paralelism Level Manager
 Due to the growth of the parallel architectures, also the multithreading
 applications have been developed during the last years, so it was
 needed tools which support the parallel programing in order to take
