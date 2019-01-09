@@ -1,4 +1,4 @@
-# Gestor de Paralelismo a nivel de Kernel (Kernel's Paralelism Level Manager)
+# Planificador Adaptativo del Kernel (Kernel Adaptive Scheduler)
 
 [ES]
 Gracias al auge de las arquitecturas paralelas, las
